@@ -110,17 +110,17 @@
 
 ## HTML 문서의 구조
 - HTML5의 표준을 지키는 HTML의 기본 골격
-    ```html
-      <!DOCTYPE html>
-      <html>
-        <head>
-          <!-- HEAD 영역 -->
-        </head>
-        <body>
-          <!-- BODY 영역 -->
-        </body>
-      </html>
-    ```
+  ```html
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <!-- HEAD 영역 -->
+      </head>
+      <body>
+        <!-- BODY 영역 -->
+      </body>
+    </html>
+  ```
 
 - `<!DOCTYPE html>`
   - Document Type(문서의 타입)을 명시한다.
@@ -147,7 +147,9 @@
 
 ### 문자 인코딩
 - HTML 파일의 인코딩 방식을 명시하는 태그이다.
+
 - 유니코드인 UTF-8의 charset으로 다양한 언어를 모두 표현할 수 있다.
+
 ```html
 <meta charset="UTF-8" />
 ```
@@ -161,7 +163,9 @@
 
 ### 메타데이터
 - 웹사이트에 대한 설명
+
 - SEO (Search Engine Optimization) 검색 엔진 최적화를 위해서는 meta tag, semantic tag 등을 통한 markup을 효과적으로 할 필요가 있다.
+
 ```html
 <title>SEO</title>
 <meta name="description" content="metadata를 알아보자!" />
@@ -173,6 +177,7 @@
 
 ### OG ( Open Graph Data )
 - Facebook에서 만들었으며 웹 사이트에 더 풍부한 메타 데이터를 제공한다.
+
 ```html
 <meta property="og:title" content="BBaek’s의 포트폴리오" />
 <meta property="og:type" content="website" />
@@ -188,6 +193,7 @@
 <link rel="stylesheet" href="css/style.css" />
 <script src="js/script.js></script>
 ```
+
 **중요한 POINT ⭐️**
 - 브라우저에서 HTML을 읽는 방법
   - 브라우저에서 HTML을 다운 받는다.
@@ -197,6 +203,7 @@
 
 - defer 옵션을 명시해주면 이러한 현상을 해결할 수 있다.
   - HTML을 읽을 때 JavaScript 파일은 넘어가고 나중에 다운로드 받아도 된다고 명시해주는 옵션이다.
+
 ```html
 <script src="js/script.js" defer></script>
 ```
