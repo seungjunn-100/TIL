@@ -164,7 +164,7 @@
 ### 메타데이터
 - 웹사이트에 대한 설명
 
-- SEO (Search Engine Optimization) 검색 엔진 최적화를 위해서는 meta tag, semantic tag 등을 통한 markup을 효과적으로 할 필요가 있다.
+- SEO(Search Engine Optimization) 검색 엔진 최적화를 위해서는 meta tag, semantic tag 등을 통한 markup을 효과적으로 할 필요가 있다.
 
 ```html
 <title>SEO</title>
@@ -175,7 +175,7 @@
 
 <br />
 
-### OG ( Open Graph Data )
+### OG(Open Graph Data)
 - Facebook에서 만들었으며 웹 사이트에 더 풍부한 메타 데이터를 제공한다.
 
 ```html

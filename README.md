@@ -15,6 +15,7 @@
 - #### HTML
 
   - [HTML Basics](/HTML/01_HTML_Basics.md)
+  - [Semantic Web](/HTML/02_Semantic_Web.md)
 
 - #### CSS
 
@@ -23,3 +24,4 @@
 - #### JavaScript
 
   - [JavaScript Basics](/JavaScript/01_JavaScript_Basics.md)
+  - [변수(Variable)](/JavaScript/02_variable.md)
