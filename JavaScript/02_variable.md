@@ -79,7 +79,7 @@ let audioWind;
 
 <br />
 
-<img width="830px" src="../images/memory.png" alt="memory 할당" />
+<img width="1012px" src="../images/memory.png" alt="memory 할당" />
 
 
 <br />
@@ -97,7 +97,7 @@ let audioWind;
 
 <br />
 
-<img width="830px" src="../images/variable_memory.png" alt="타입별 메모리 할당" />
+<img width="1012px" src="../images/variable_memory.png" alt="타입별 메모리 할당" />
 
 
 <br />
@@ -241,7 +241,7 @@ let appleColor = 'red'; // red
 let appleDisplay = '🍎'; // 🍎
 
 let apple = {
-  name: '사과',
+  name: '사과', // key: value,
   color: 'red',
   display: '🍎',
 };
@@ -263,7 +263,7 @@ console.log(orange); // { name: '오렌지', color: 'orange', display: '🍊' }
 
 <br />
 
-<img width="830px" src="../images/object.png" alt="객체 타입 메모리 할당">
+<img width="1012px" src="../images/object.png" alt="객체 타입 메모리 할당">
 
 
 <br />
@@ -301,7 +301,7 @@ console.log(orange); // { name: '오렌지' }
 ```
 <br />
 
-<img width="830px" src="../images/copy_by.png" alt="copy by 참고 이미지" />
+<img width="1012px" src="../images/copy_by.png" alt="copy by 참고 이미지" />
 
 
 <br />
