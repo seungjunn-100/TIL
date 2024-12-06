@@ -1,4 +1,4 @@
-# 연산자(Operators)
+# 연산자(Operator)
 
 
 <br />
@@ -41,7 +41,7 @@ let a = (b = 2); // (b = 2)라는 표현식이 계산되어 a에 재할당이 �
 <br />
 
 
-## 산술 연산자(Arithmetic Operators)
+## 산술 연산자(Arithmetic Operator)
 ```javascript
 // + 더하기
 // - 빼기
@@ -70,7 +70,7 @@ console.log(text); // 11 - 문자열
 <br />
 
 
-## 단항 연산자(Unary Operators)
+## 단항 연산자(Unary Operator)
 ```javascript
 // + 양
 // - 음
@@ -108,7 +108,7 @@ console.log(!1); // false, ! - 부정연산자
 <br />
 
 
-## 할당 연산자(Assignment Operators)
+## 할당 연산자(Assignment Operator)
 ```javascript
 // = 할당
 let a = 1;
@@ -130,7 +130,7 @@ a **= 2; // 4
 <br />
 
 
-## 증감 연산자(Incremoent, Decrement Operators)
+## 증감 연산자(Incremoent, Decrement Operator)
 ```javascript
 let a = 0;
 console.log(a); // 0
@@ -162,7 +162,7 @@ console.log(a); // 1, ++ 연산자로 인해 증가 시킨 값이 출력이 된�
 <br />
 
 
-## 비교 연산자(Relational Operators)
+## 비교 연산자(Relational Operator)
 ```javascript
 // > 크다
 // < 작다
@@ -201,13 +201,13 @@ console.log(a); // 3
 result = a + b * 4;
 console.log(result); // 15
 ```
-- [우선순위 참고](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence)
+- [우선순위 참고](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operator/Operator_precedence)
 
 <br />
 <br />
 
 
-## 동등 비교 관계 연산자(Equality Operators)
+## 동등 비교 관계 연산자(Equality Operator)
 ```javascript
 // == 값이 같다.
 // != 값이 다르다.
