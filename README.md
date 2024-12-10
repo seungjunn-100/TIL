@@ -26,3 +26,4 @@
   - [JavaScript Basics](/JavaScript/01_JavaScript_Basics.md)
   - [변수(Variable)](/JavaScript/02_variable.md)
   - [연산자(Operator)](/JavaScript/03_operator.md)
+  - [제어문(Control flow statement)](/JavaScript/04_control.md)
