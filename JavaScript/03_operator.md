@@ -180,7 +180,7 @@ console.log(2 >= 3); // false
 <br />
 
 
-## 연산자 우선순위
+## 연산자 우선순위(Operator Priority)
 ```javascript
 let a = 2;
 let b = 3;
@@ -236,4 +236,48 @@ console.log(obj1.name === obj2.name); // true, 같은 문자열 타입과 값을
 let obj3 = obj2;
 console.log(obj3 == obj2); // true, 같은 참조값(메모리 주소값)을 가지고 있기때문이다.
 console.log(obj3 === obj2); // true, 같은 값과 같은 object 타입을 가지고 있기 때문이다.
+```
+
+
+<br />
+<br />
+
+
+## 논리 연산자(Logical Operator)
+```javascript
+// && 그리고
+// || 또는
+// ! 부정(단항연산자에서 온것)
+// !! 불리언값으로 변환 (단항연산자 응용버전)
+
+let num = 8;
+
+if (num >= 0 && num < 9) { // 둘 다 true면 출력
+  console.log('👍'); // 👍
+}
+
+if (num >= 0 || num > 20) { // 둘중 하나만 true여도 출력
+  console.log('👍'); // 👍
+}
+
+if (!(num >= 0 || num > 20)) { // 전체를 부정할 수도 있다.
+  console.log('👍'); // 👍
+}
+
+if (num != 8) { // num이 8이 아닐 때 출력
+  console.log('👍'); // num = 8 이므로 출력 X
+}
+
+console.log(true && true); // true
+console.log(true && false); // false
+console.log(false && true); // false
+console.log(false && false); // false
+
+console.log(true || true); // true
+console.log(true || false); // true
+console.log(false || true); // true
+console.log(false || false); // false
+
+console.log(!'text'); // false
+console.log(!!'text'); // true
 ```
