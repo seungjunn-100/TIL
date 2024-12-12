@@ -171,3 +171,116 @@ function sum(a, b, ...numbers) {
 }
 sum(1, 2, 3, 4, 5, 6, 7, 8); // a = 1, b = 2, [ 3, 4, 5, 6, 7, 8 ]
 ```
+
+
+<br />
+<br />
+
+
+## 함수의 표현식
+```javascript
+// 함수 선언문 function name() { }
+// 함수 표현식 const name = function () { }
+// 표현식 = 값으로 평가될 수 있는 것
+// 함수 자체는 선언문이지만 함수는 값으로 계산될 수 있는 표현식이다.
+let add = function (a, b) { // 무명함수, 함수 이름을 작성해도 되지만 외부에서는 접근이 불가능, 보통 이름을 생략
+  return a + b;
+};
+console.log(add(1, 2));
+
+// 화살표 함수 const name = () => { }
+add = (a, b) => {
+  return a + b;
+};
+add = (a, b) => a + b; // 어떤 값을 바로 리턴하는 경우라면 이런식으로 생략 가능!
+console.log(add(2, 2));
+
+// IIFE(Immedicately-Invoked Function Expressions)
+// 즉각적으로 호출이 되는 함수 표현식
+(function run() {
+  console.log('⭐️');
+})();
+
+// 생상자 함수 const object = new Function(); // 추후
+```
+
+
+<br />
+<br />
+
+
+## 콜백함수
+- 나중에 호출해서 사용할 수 있는 함수
+```javascript
+const add = (a, b) => a + b;
+const multiply = (a, b) => a * b;
+
+// 전달된 action은 콜백함수이다.
+// 전달될 당시에 함수를 바로 호출해서 반환된 값을 전달하는 것이 아니라
+// 함수를 가르키고 있는 함수의 레퍼런스(참조값)가 전달 된다.
+// 그래서 함수는 고차함수안(calculator)에서 필요한 순간에 콜백이 된다.
+function calculator(a, b, action) {
+  if (a < 0 || b < 0) {
+    return;
+  }
+  let result = action(a, b);
+  console.log(result);
+  return result;
+}
+
+calculator(1, 2, add);
+calculator(1, 2, multiply);
+calculator(-1, -2, add); // if문에 의하여 함수가 종료되어 콜백함수는 동작하지 않는다!
+```
+
+<br />
+
+### 일급객체(함수) (first-class object(function))
+- (함수가) 일반 객체처럼 모든 연산이 가능한 것
+  - 함수의 매개변수를 통해 함수를 전달
+  - 함수의 반환값
+  - 할당 명령문
+  - 동일 비교 대상
+
+<br />
+
+### 고차함수(Higher-order function)
+- 인자로 (콜백)함수를 받거나
+
+- 함수를 반환하는 함수를 고차함수
+
+
+<br />
+<br />
+
+
+## 불변성(Immutability) ⭐️
+- 상태가 변경되지 않도록 불변성을 유지하면서 코딩하는 것이 중요하다.
+
+```javascript
+// 함수 내부에서 외부로부터 주어진 인자의 값을 변경하는 것은 X
+// 상태 변경이 필요한 경우에는, 새로운 상태를(오브젝트, 값) 만들어서 반환해야 한다. ⭐️
+// 원시값 - 값에 의한 복사
+// 객체값 - 참조에 의한 복사 (메모리 주소)
+function display(num) {
+  num = 5; // X
+  console.log(num);
+}
+const value = 4;
+display(value); // 5
+console.log(value); // 4
+
+// 심각한 예제
+function displayObj(obj) {
+  obj.name = 'kim'; // 2. 외부로 부터 주어진 인자(object)를 내부에서 변경하면 참조값이 같으므로 모두 적용이된다. XXXXX
+  console.log(obj);
+}
+const firstName = { name: 'son' };
+displayObj(firstName); // kim, 1. 함수를 전달할 때는 object의 참조값이 전달되는것이다.
+console.log(firstName); // kim
+
+// 부득이 하게 주어진 인자로 부터 상태를 변경해야할 때
+function changeName(obj) { // 이름부터 변경하는 느낌을 주도록!
+  return {...obj, name: 'kim'}; // 기존에 주어진 object를 유지하면서, 반환할 때는 새로운 object 만들기!
+}
+```
