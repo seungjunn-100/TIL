@@ -261,7 +261,7 @@ if (num >= 0 || num > 20) { // 둘중 하나만 true여도 출력
 }
 
 if (!(num >= 0 || num > 20)) { // 전체를 부정할 수도 있다.
-  console.log('👍'); // 👍
+  console.log('👍');  // 값이 true인데 부정하여 출력 X
 }
 
 if (num != 8) { // num이 8이 아닐 때 출력
