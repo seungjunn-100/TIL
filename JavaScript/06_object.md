@@ -112,7 +112,7 @@ console.log(obj); // { name: 'bbaek', age: '1995' }
 <br />
 
 
-## 객체 동적으로 접근하기
+## 생성자 함수
 ```javascript
 const apple = {
   name: 'apple',
