@@ -191,7 +191,7 @@ student.fullName = '흰둥이'; // 흰둥이, 할당(set 호출)
 
 ## 상속의 관계
 ```javascript
-// 동물물, 부모
+// 동물, 부모
 class Animal {
   constructor (color) {
     this.color = color;
