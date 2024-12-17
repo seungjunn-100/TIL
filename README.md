@@ -29,3 +29,4 @@
   - [제어문(Control flow statement)](/JavaScript/04_control.md)
   - [함수(Function)](/JavaScript/05_function.md)
   - [객체(Object)](/JavaScript/06_object.md)
+  - [클래스(Class)](/JavaScript/07_class.md)
