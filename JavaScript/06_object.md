@@ -112,7 +112,7 @@ console.log(obj); // { name: 'bbaek', age: '1995' }
 <br />
 
 
-## 객체 동적으로 접근하기
+## 생성자 함수
 ```javascript
 const apple = {
   name: 'apple',
@@ -129,7 +129,8 @@ const orange = {
 }
 
 // 생성자 함수, 함수이름이 대문자로 시작
-// 특정한 템플릿에 맞게 객체를 쉽게 만들어 준다.
+// 객체를 만들어 낼 수 있는 템플릿(양식)
+// 데이터를 주입해서 객체를 생성할 수 있다.
 function Fruit(name, emoji) {
   this.name = name; // this는 객체 자기 자신을 가르키고 name이라는 key가 만들어지고 name 인자로 전달된 값을 할당 받는다.
   this.emoji = emoji;
