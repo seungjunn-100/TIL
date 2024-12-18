@@ -30,3 +30,4 @@
   - [함수(Function)](/JavaScript/05_function.md)
   - [객체(Object)](/JavaScript/06_object.md)
   - [클래스(Class)](/JavaScript/07_class.md)
+  - [내장객체(Built-in Object)](/JavaScript/08_built_in_object.md)
