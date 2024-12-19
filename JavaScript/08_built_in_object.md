@@ -175,3 +175,148 @@ console.log(isEqual(1, 1)); // true
 console.log(isEqual(0.1, 0.1)); // true
 console.log(isEqual(num, 0.1)); // true
 ```
+
+
+<br />
+<br />
+
+
+## 수학 관련 함수들
+``` javascript
+// static properties
+// 오일러의 상수, 자연로그의 밑
+console.log(Math.E); // 2.718281828459045
+// 원주율 PI값
+console.log(Math.PI); // 3.141592653589793
+
+// static method
+// 절대값
+console.log(Math.abs(-10)); // 10
+// 소수점 이하를 올림
+console.log(Math.ceil(1.4)); // 2
+// 소수점 이하를 내림
+console.log(Math.floor(1.4)); // 1
+// 소수점 이하를 반올림
+console.log(Math.round(1.4)); // 1
+console.log(Math.round(1.7)); // 2
+// 정수만 반환(소수점 이하를 버림)
+console.log(Math.trunc(1.5432)); // 1
+// 최대값을 찾기
+console.log(Math.max(1, 3, 4, 5)); // 5
+// 최소값을 찾기
+console.log(Math.min(1, 3, 4, 5)); // 1
+// 거듭제곱
+console.log(3 ** 2); // 9
+console.log(Math.pow(3, 2)); // 9
+// 제곱근
+console.log(Math.sqrt(9)); // 3
+// 랜덤한 값을 반환
+console.log(Math.random()); // 0 ~ 1 사이의 랜덤 값값
+console.log(Math.floor(Math.random() * 10 + 1)); // 1 ~ 10 중의 랜덤 값
+```
+
+
+<br />
+<br />
+
+
+## 문자열 함수들
+``` javascript
+const textObj = new String('Hello world!');
+const text = 'Hello world!';
+console.log(textObj); // [String: 'Hello world!']
+console.log(text); // Hello world!
+
+// 문자열의 길이가 몇개인지 확인
+console.log(text.length); // 12
+
+// 인덱스에 따른 문자열 확인
+// 배열로 접근하는 법
+console.log(text[0]); // H
+console.log(text[1]); // e
+console.log(text[2]); // l
+// 함수로 접근하는 법
+console.log(text.charAt(0)); // H
+console.log(text.charAt(1)); // e
+console.log(text.charAt(2)); // l
+
+// 문자열에 따른 인덱스 확인
+console.log(text.indexOf('l')); // 2, 첫번째것만 확인
+console.log(text.lastIndexOf('l')); // 9, 뒤에서부터 첫번째것만 확인
+
+// 문자열에 특정 문자열이 포함되는지 확인
+console.log(text.includes('yy')); // false
+console.log(text.includes('ow')); // false, 스페이스 구분
+console.log(text.includes('o w')); // true
+console.log(text.includes('h')); // false, 대소문자 구분
+console.log(text.includes('H')); // true
+
+// 문자열이 특정 문자열로 시작하는지 확인
+console.log(text.startsWith('h')); // false
+console.log(text.startsWith('H')); // true
+console.log(text.startsWith('He')); // true
+// 문자열이 특정 문자열로 끝나는지 확인
+console.log(text.endsWith('d')); // false
+console.log(text.endsWith('!')); // true
+
+// 문자열을 전부 대문자로 변환
+console.log(text.toUpperCase()); // HELLO WORLD!
+// 문자열을 전부 소문자로 변환
+console.log(text.toLowerCase()); // hello world!
+
+// 문자열중 특정한 위치의 문자열을 삭제
+console.log(text.substring(0, 2)); // He, 시작 인덱스 부터 끝 인덱스 전까지 반환
+console.log(text.substring(1, 4)); // ell
+console.log(text.slice(2)); // llo world!, 설정 인덱스 부터 잘라낸 후 반환
+console.log(text.slice(-2)); // d!, 뒤에서부터 설정 인덱스 전까지 잘라낸 후 반환
+
+const space = '     space  '
+// 공백 제거
+console.log(space.trim()); // space
+
+// 알고리즘에서 많이 사용 ⭐️⭐️⭐️
+const longText = 'Get to the point';
+// 문자열을 특정한 구분자로 끊어서 배열로 반환
+console.log(longText.split(' ')); // [ 'Get', 'to', 'the', 'point' ], 공백을 구분자로 끊음
+console.log(longText.split(' ', 2)); // [ 'Get', 'to' ], 특정 갯수 만큼 반환
+
+const longText2 = 'Get to the, point';
+console.log(longText2.split(', ')); // [ 'Get to the', 'point' ], 콤마랑 스페이스를 구분자로 끊음
+```
+
+
+<br />
+<br />
+
+
+## 날짜 관련 함수들
+``` javascript
+// UTC 기준 (협정 세계시, 1970년 1월 1일 UTC 자정과의 시간 차이를 밀리초 단위로 표기)
+console.log(new Date()); // 현재시간
+console.log(new Date('Jun 5, 2024')); // 날짜만 지정
+console.log(new Date('2024-12-25T06:30:00')); // 날짜와 시간 지정
+
+// static method
+console.log(Date.now());
+// 특정한 시간을 밀리초 단위로 표기
+console.log(Date.parse('2024-12-25T06:30:00'));
+
+console.clear();
+
+const now = new Date();
+now.setFullYear('2023'); // 년도 설정
+now.setMonth(1); // 달 설정, (0: 1월, 1: 2월, ..., 11: 12월)
+console.log(now.getFullYear()); // 2023
+console.log(now.getMonth()); // 0: 1월, 1: 2월, ..., 11: 12월
+console.log(now.getDate()); // 0: 1일, 1: 2일, ..., 29: 30일
+console.log(now.getDay()); // 0: 일요일, 1: 월요일, ..., 6: 토요일
+console.log(now.getHours());
+console.log(now.getTime());
+console.log(now); // 2023-02-19T07:01:36.804Z
+console.log(now.toString()); // Sun Feb 19 2023 16:01:36 GMT+0900 (대한민국 표준시)
+console.log(now.toDateString()); // Sun Feb 19 2023
+console.log(now.toTimeString()); // 16:02:34 GMT+0900 (대한민국 표준시)
+console.log(now.toISOString()); // ISO 8601 형식, 2023-02-19T07:02:34.486Z
+console.log(now.toLocaleString('en-US')); // 2/19/2023, 4:03:46 PM
+console.log(now.toLocaleString('ko-KR')); // 2023. 2. 19. 오후 4:06:02
+```
